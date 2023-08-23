@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en" class="h-100">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Samuel Loga, Akuzike Mchembe, Ameerah Mwale, Uchindami Gondwe, Natasha Mahiye, Victoria Kasoti, Malango Msowoya, Esther Katsala and Grace Kanjedza">
+    <meta name="generator" content="Hugo 0.84.0">
+    <title>UEIS - Fingerprint Scan</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      .scan-fingerprint {
+        border: none;
+        box-shadow: none;
+        background-color: #fff;
+      }
+
+      .btn-send-pin {
+        border: none; /* Remove border */
+        box-shadow: none; /* Remove box shadow */
+        padding: 0.375rem 0.75rem;
+        background-color: #fff;
+      }
+
+      .pin-input {
+        padding: 10px;
+        width: 20em;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 14px;
+        outline: none; /* Remove the default outline */
+        transition: border-color 0.2s ease-in-out; /* Add a smooth transition */
+      }
+
+      /* Style the input box when focused */
+      .pin-input:focus {
+        border-color: #007bff; /* Change to your desired focused border color */
+      }
+    </style>
+
+    <!-- Custom style -->
+    <link href="css/cover.css" rel="stylesheet">
+  </head>
+
+  <body class="d-flex h-100 text-center text-dark bg-white">
+    
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+      <main class="px-3 mt-3">
+        <h1>Fingerprint Authentication</h1>
+
+        <p class="text-dark-50">Please place your finger</p>
+        
+        <button class="scan-fingerprint">
+          <img src="img/fingerprint-scan.png" title="Fingerprint" alt="Fingerprint" 
+            class="img-fluid mt-4" 
+            style="cursor: pointer; height: 200px; width: auto;"
+          >
+        </button>
+
+        <p class="text-dark-50 mt-5">Don't have a fingerprint device?</p>
+        <div class="lead">
+          <form>
+            <input type="password" class="pin-input" placeholder="Enter your PIN" required>
+            <button type="submit" class="submit-button btn-send-pin">
+              <img src="img/enter.png" alt="Submit" class="button-icon"
+                style="height: 1.8em;"
+              >
+            </button>
+          </form>
+        </div>
+      </main>
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.5.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <title>User Table</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
+
+
+  <style>
+    .third-party-icon {
+        height: 50px; width: 50px;
+    }
+    .add-user-icon, .add-something-icon {height: 40px; width: 40px;}
+    .add {background-color: #4C78AB;}
+
+
+          /* Custom styling for the table */
+          .custom-table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+  
+      .custom-table th,
+      .custom-table td {
+        border: none;
+        padding: 8px;
+      }
+  
+      .custom-table th {
+        border-bottom: 1px solid #ccc;
+      }
+  
+      .custom-table tbody tr:nth-child(odd) {
+        background-color: #f5f5f5;
+      }
+  
+      .custom-table tbody tr:nth-child(even) {
+        background-color: #ffffff;
+      }
+  
+      .custom-table-rounded {
+        border-radius: 10px;
+      }
+  
+      .custom-dropdown {
+        display: inline-block;
+      }
+      
+      /* Custom styling for the sidebar */
+      .sidebar {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        background-color: #f8f9fa;
+      }
+  </style>
+</head>
+<body>
+   <header class="bg-white text-dark py-4 d-flex align-items-center">
+      <div class="container d-flex justify-content-between">
+          <div class="">
+            <h1 class="m-0" style="color: lightblue;">Unified Electronic Identification System</h1>
+            <span>Empowering connectivity, unifying identity</span>
+          </div>
+          <div class="d-flex align-items-center">
+            <img class="rounded-circle me-2" src="img/user.png" alt="User Profile Photo" width="50" height="50">
+            <div class="text-end">
+              <p class="m-0">Francine Chavinda</p>
+              <p class="m-0">Administrator</p>
+            </div>
+          </div>
+        </div>
+    </header>
+
+  <div class="container mt-4">
+    <div class="d-flex justify-content-between">
+       <h3>UEIS Admin Dashboard</h3>
+       <p class="notification-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-bell-fill" viewBox="0 0 16 16">
+            <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zm.995-14.901a1 1 0 1 0-1.99 0A5.002 5.002 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901z"/>
+          </svg>
+        </p>
+    </div>
+  </div>
+  
+  <div class="container mt-4">
+    <div class="row">
+      <!-- Left Cards -->
+      <div class="col-md-8">
+        <div class="row">
+          <div class="col">
+            <div class="card">
+              <div class="card-body text-center">
+                <img src="img/ebank.png" alt="" class="img-fluid third-party-icon">
+                <p class="card-text">NBM</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <div class="card-body text-center">
+                <img src="img/digitai-signature.png" alt="" class="img-fluid third-party-icon">
+                <p class="card-text">NRB</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <div class="card-body text-center">
+                <img src="img/epay.png" alt="" class="img-fluid third-party-icon">
+                <p class="card-text">TNM</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <div class="card-body text-center">
+                <img src="img/ballot-box.png" alt="" class="img-fluid third-party-icon">
+                <p class="card-text">MEC</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <div class="card-body text-center">
+                <img src="img/ebank.png" alt="" class="img-fluid third-party-icon">
+                <p class="card-text">FDH</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mt-3 text-start">
+          <a href="#" style="text-decoration: none;">View All Third-Party Organizations aand Companies available >> </a>
+        </div>
+      </div>
+      <!-- Right Cards -->
+      <div class="col-md-4">
+        <div class="card add">
+          <div class="card-body">
+            <img src="img/add-user.png" alt="" class="img-fluid add-user-icon">
+            <span class="ms-3">Add User</span>
+          </div>
+        </div>
+        <div class="card add mt-3">
+          <div class="card-body">
+            <img src="img/add-user.png" alt="" class="img-fluid add-something-icon">
+            <span class="ms-3">Add something</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container my-4">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="sidebar">
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Manage End-Users</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Manage Third-Party</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-9">
+        <h2>User Table</h2>
+        <table class="table table-bordered custom-table custom-table-rounded mb-5">
+          <thead class="mb-3">
+            <tr>
+              <th>NID</th>
+              <th>Username</th>
+              <th>First Name</th>
+              <th>Other Name</th>
+              <th>Last Name</th>
+              <th>Nationality</th>
+              <th>Gender</th>
+              <th>User Type</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>123456789</td>
+              <td>john_doe</td>
+              <td>John</td>
+              <td>Ye</td>
+              <td>Doe</td>
+              <td>Malawi</td>
+              <td>Male</td>
+              <td>Regular User</td>
+              <td class="custom-dropdown">
+                <div class="dropdown">
+                  <a class="text-decoration-none dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="bi bi-three-dots-vertical"></i>
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <a class="dropdown-item" href="#">Edit</a>
+                    <a class="dropdown-item" href="#">Delete</a>
+                    <a class="dropdown-item" href="#">Assign Privileges</a>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <!-- Add more rows here -->
+            <tr>
+                <td>123456789</td>
+                <td>john_doe</td>
+                <td>John</td>
+                <td>Ye</td>
+                <td>Doe</td>
+                <td>Malawi</td>
+                <td>Male</td>
+                <td>Regular User</td>
+                <td class="custom-dropdown">
+                  <div class="dropdown">
+                    <a class="text-decoration-none dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <i class="bi bi-three-dots-vertical"></i>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                      <a class="dropdown-item" href="#">Edit</a>
+                      <a class="dropdown-item" href="#">Delete</a>
+                      <a class="dropdown-item" href="#">Assign Privileges</a>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+
+              <tr>
+                <td>123456789</td>
+                <td>john_doe</td>
+                <td>John</td>
+                <td>Ye</td>
+                <td>Doe</td>
+                <td>Malawi</td>
+                <td>Male</td>
+                <td>Regular User</td>
+                <td class="custom-dropdown">
+                  <div class="dropdown">
+                    <a class="text-decoration-none dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <i class="bi bi-three-dots-vertical"></i>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                      <a class="dropdown-item" href="#">Edit</a>
+                      <a class="dropdown-item" href="#">Delete</a>
+                      <a class="dropdown-item" href="#">Assign Privileges</a>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+
+              <tr>
+                <td>123456789</td>
+                <td>john_doe</td>
+                <td>John</td>
+                <td>Ye</td>
+                <td>Doe</td>
+                <td>Malawi</td>
+                <td>Male</td>
+                <td>Regular User</td>
+                <td class="custom-dropdown">
+                  <div class="dropdown">
+                    <a class="text-decoration-none dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <i class="bi bi-three-dots-vertical"></i>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                      <a class="dropdown-item" href="#">Edit</a>
+                      <a class="dropdown-item" href="#">Delete</a>
+                      <a class="dropdown-item" href="#">Assign Privileges</a>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+
+              <tr>
+                <td>123456789</td>
+                <td>john_doe</td>
+                <td>John</td>
+                <td>Ye</td>
+                <td>Doe</td>
+                <td>Malawi</td>
+                <td>Male</td>
+                <td>Regular User</td>
+                <td class="custom-dropdown">
+                  <div class="dropdown">
+                    <a class="text-decoration-none dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <i class="bi bi-three-dots-vertical"></i>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                      <a class="dropdown-item" href="#">Edit</a>
+                      <a class="dropdown-item" href="#">Delete</a>
+                      <a class="dropdown-item" href="#">Assign Privileges</a>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+
+              <tr>
+                <td>123456789</td>
+                <td>john_doe</td>
+                <td>John</td>
+                <td>Ye</td>
+                <td>Doe</td>
+                <td>Malawi</td>
+                <td>Male</td>
+                <td>Regular User</td>
+                <td class="custom-dropdown">
+                  <div class="dropdown">
+                    <a class="text-decoration-none dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <i class="bi bi-three-dots-vertical"></i>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                      <a class="dropdown-item" href="#">Edit</a>
+                      <a class="dropdown-item" href="#">Delete</a>
+                      <a class="dropdown-item" href="#">Assign Privileges</a>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+
+              <tr>
+                <td>123456789</td>
+                <td>john_doe</td>
+                <td>John</td>
+                <td>Ye</td>
+                <td>Doe</td>
+                <td>Malawi</td>
+                <td>Male</td>
+                <td>Regular User</td>
+                <td class="custom-dropdown">
+                  <div class="dropdown">
+                    <a class="text-decoration-none dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <i class="bi bi-three-dots-vertical"></i>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                      <a class="dropdown-item" href="#">Edit</a>
+                      <a class="dropdown-item" href="#">Delete</a>
+                      <a class="dropdown-item" href="#">Assign Privileges</a>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.5.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Unified Electronic Identification System">
+    <meta name="author" content="Samuel Loga, Akuzike Mchembe, Ameerah Mwale, Uchindami Gondwe, Natasha Mahiye, Victoria Kasoti, Malango Msowoya, Esther Katsala and Grace Kanjedza">
+    <meta name="generator" content="Hugo 0.84.0">
+    <title>UEIS - Home</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      body {
+        box-sizing: border-box;
+      }
+
+      .bi {
+        color: #070707;
+        margin-right: 10px;
+      }
+      .bi-box-arrow-left {
+        color: red;
+        margin-right: 10px;
+      }
+      .vertical-line {
+        border-left: 1px solid #000;
+        height: 100vh;
+      }
+      /* Create an active/current "tab button" class */
+      .tab button.active {
+        background-color: #0D99FF;
+        opacity: 0.8;
+      }
+      .logout {
+        margin-top: 9.5em;
+        background-color: #070707;
+        color: #fff;
+      }.logout:hover, .logout:focus {color: #0D99FF;}
+
+      .card{
+        background-color: #FAF9F9;
+      }
+      .service-icon {
+        height: 100px;
+        width: auto;
+      }
+      .service-link {
+        text-decoration: none;
+        color: #0D99FF;
+        font-weight: 500;
+        padding: 5px;
+      }
+      .service-link:hover, .service-link:focus {
+        color: #000;
+        transition: 0.6s ease-in-out;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="bg-white text-dark py-4 d-flex align-items-center">
+      <div class="container d-flex justify-content-between">
+        <div class="">
+          <h1 class="m-0" style="color: lightblue;">Unified Electronic Identification System</h1>
+          <span>Empowering connectivity, unifying identity</span>
+        </div>
+        <div class="d-flex align-items-center">
+          <img class="rounded-circle me-2" src="img/user.png" alt="User Profile Photo" width="50" height="50">
+          <div class="text-end">
+            <p class="m-0">Samuel Loga</p>
+            <p class="m-0">Citizen</p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="container mt-4" style="height: 70vh;">
+      <div class="row">
+        <nav class="col-md-3 mb-4 tab">
+          <ul class="list-unstyled">
+            <li class="mb-2">
+              <button class="btn btn-secondary w-100 tablinks" onclick="openCity(event, 'home')">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-up" viewBox="0 0 16 16">
+                  <path d="M7.293 1.5a1 1 0 0 1 1.414 0L11 3.793V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v3.293l2.354 2.353a.5.5 0 0 1-.708.708L8 2.207l-5 5V13.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 1 0 1h-4A1.5 1.5 0 0 1 2 13.5V8.207l-.646.647a.5.5 0 1 1-.708-.708L7.293 1.5Z"/>
+                  <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Zm.354-5.854 1.5 1.5a.5.5 0 0 1-.708.708L13 11.707V14.5a.5.5 0 1 1-1 0v-2.793l-.646.647a.5.5 0 0 1-.708-.707l1.5-1.5a.5.5 0 0 1 .708 0Z"/>
+                </svg> Home
+              </button>
+            </li>
+            <li class="mb-2">
+              <button class="btn btn-secondary w-100 tablinks" onclick="openCity(event, 'user-profile')">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-lines-fill" viewBox="0 0 16 16">
+                  <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5zm.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1h-4zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2z"/>
+                </svg> User Profile
+              </button>
+            </li>
+            <li class="mb-2">
+              <button class="btn btn-secondary w-100 tablinks" onclick="openCity(event, 'services')">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-building-gear" viewBox="0 0 16 16">
+                  <path d="M2 1a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v6.5a.5.5 0 0 1-1 0V1H3v14h3v-2.5a.5.5 0 0 1 .5-.5H8v4H3a1 1 0 0 1-1-1V1Z"/>
+                  <path d="M4.5 2a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1Zm3 0a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1Zm3 0a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1Zm-6 3a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1Zm3 0a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1Zm3 0a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1Zm-6 3a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1Zm3 0a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1Zm4.386 1.46c.18-.613 1.048-.613 1.229 0l.043.148a.64.64 0 0 0 .921.382l.136-.074c.561-.306 1.175.308.87.869l-.075.136a.64.64 0 0 0 .382.92l.149.045c.612.18.612 1.048 0 1.229l-.15.043a.64.64 0 0 0-.38.921l.074.136c.305.561-.309 1.175-.87.87l-.136-.075a.64.64 0 0 0-.92.382l-.045.149c-.18.612-1.048.612-1.229 0l-.043-.15a.64.64 0 0 0-.921-.38l-.136.074c-.561.305-1.175-.309-.87-.87l.075-.136a.64.64 0 0 0-.382-.92l-.148-.045c-.613-.18-.613-1.048 0-1.229l.148-.043a.64.64 0 0 0 .382-.921l-.074-.136c-.306-.561.308-1.175.869-.87l.136.075a.64.64 0 0 0 .92-.382l.045-.148ZM14 12.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0Z"/>
+                </svg> Services
+              </button>
+            </li>
+            <li class="mb-2">
+              <button class="btn btn-secondary w-100 tablinks" onclick="openCity(event, 'about-us')">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-menu-up" viewBox="0 0 16 16">
+                  <path d="M7.646 15.854a.5.5 0 0 0 .708 0L10.207 14H14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3.793l1.853 1.854zM1 9V6h14v3H1zm14 1v2a1 1 0 0 1-1 1h-3.793a1 1 0 0 0-.707.293l-1.5 1.5-1.5-1.5A1 1 0 0 0 5.793 13H2a1 1 0 0 1-1-1v-2h14zm0-5H1V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v2zM2 11.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 0-1h-8a.5.5 0 0 0-.5.5zm0-4a.5.5 0 0 0 .5.5h11a.5.5 0 0 0 0-1h-11a.5.5 0 0 0-.5.5zm0-4a.5.5 0 0 0 .5.5h6a.5.5 0 0 0 0-1h-6a.5.5 0 0 0-.5.5z"/>
+                </svg> About Us
+              </button>
+            </li>
+            <li class="mb-2">
+              <button class="btn btn-secondary w-100 tablinks" onclick="openCity(event, 'help')">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
+                  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                  <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                </svg> Help
+              </button>
+            </li>
+            <li>
+              <button class="btn w-100 logout">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-left" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0v2z"/>
+                  <path fill-rule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z"/>
+                </svg> Logout
+              </button>
+            </li>
+          </ul>
+        </nav>
+
+
+        <div class="col-md-9">
+          <div class="row">
+              <div id="home" class="tabcontent">
+                <div class="row">
+                    <div class="col-md-5">
+                        <img src="img/malawi.png" alt="Map" class="img-fluid px-5"
+                          style="height: 17em; width: auto;"
+                        >
+                      </div>
+                      <div class="col-md-2 d-md-block">
+                          <span class="vertical-line"></span>
+                      </div>
+                      <div class="col-md-5">
+                        <h2>UEIS</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac cursus tortor. Sed volutpat euismod urna, vel laoreet libero interdum vel...</p>
+                      </div>
+                </div>
+              </div>
+
+
+              
+              <div id="user-profile" class="tabcontent" style="display: none;">
+                <h3>Profile</h3>
+                <p>London is the capital city of England.</p>
+              </div>
+              
+
+
+              <div id="services" class="tabcontent" style="display: none;">
+                <h3>Services</h3>
+                <div class="row text-center g-4">
+                  <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                      <div class="card card-cover text-dark">
+                          <div class="card-body text-center">
+                              <img src="img/epay.png" alt="" class="img-fluid service-icon">
+                          </div>
+                      </div>
+                      <p class="py-2">
+                        <a href="" class="service-link" href="#">E-Payment</a>
+                      </p>
+                  </div>
+
+                  <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card card-cover text-dark">
+                        <div class="card-body text-center">
+                            <img src="img/ebank.png" alt="" class="img-fluid service-icon">
+                        </div>
+                    </div>
+                    <p class="py-2">
+                      <a href="" class="service-link" href="#">E-Banking</a>
+                    </p>
+                  </div>
+
+                  <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card card-cover text-dark">
+                        <div class="card-body text-center">
+                            <img src="img/ehealth.png" alt="" class="img-fluid service-icon">
+                        </div>
+                    </div>
+                    <p class="py-2">
+                      <a href="" class="service-link" href="#">E-Health</a>
+                    </p>
+                  </div>
+
+                  <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card card-cover text-dark">
+                        <div class="card-body text-center">
+                            <img src="img/ballot-box.png" alt="" class="img-fluid service-icon">
+                        </div>
+                    </div>
+                    <p class="py-2">
+                      <a href="" class="service-link" href="#">E-Voting</a>
+                    </p>
+                  </div>
+
+                  <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card card-cover text-dark">
+                        <div class="card-body text-center">
+                            <img src="img/digitai-signature.png" alt="" class="img-fluid service-icon">
+                        </div>
+                    </div>
+                    <p class="py-2">
+                      <a href="" class="service-link" href="#">Digital Signatures</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              
+
+
+              <div id="about-us" class="tabcontent" style="display: none;">
+                <h3>About</h3>
+                <div class="row">
+                  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <div class="card card-cover text-dark">
+                            <div class="card-body text-center">
+                                <h3 class="pt-1">UEIS on the Deck</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 mt-3">
+                      <div class="card card-cover text-dark">
+                          <div class="card-body text-center">
+                              <h3 class="card-title mb-3">Mission</h3>
+                              <p class="card-text">Convenience and Efficiency</p>
+                              <p class="card-text">Enhanced Security</p>
+                              <p class="card-text">Reduced Redundancy</p>
+                              <p class="card-text">Fraud Prevention</p>
+                          </div>
+                      </div>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 my-3">
+                      <div class="card card-cover text-dark">
+                          <div class="card-body text-center">
+                              <h3 class="card-title mb-3">Core Values</h3>
+                              <p class="card-text">Transparency</p>
+                              <p class="card-text">Inclusivity</p>
+                              <p class="card-text">Ethical Use of Data</p>
+                              <p class="card-text">Security and Privacy</p>
+                          </div>
+                      </div>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 mt-3">
+                      <div class="card card-cover text-dark">
+                          <div class="card-body text-center">
+                              <h3 class="card-title mb-3">Vision</h3>
+                              <p class="card-text">Secure Digital Landscape</p>
+                              <p class="card-text">Privacy and Data Security</p>
+                              <p class="card-text">Ease of Access to Services</p>
+                              <p class="card-text">Seamless Interactions</p>
+                          </div>
+                      </div>
+                    </div>
+                </div>
+              </div>
+
+
+
+              <div id="help" class="tabcontent" style="display: none;">
+                <h3>Help - FAQ</h3>
+                <p>Some frequently asked questions about UEIS;</p>
+
+                <div class="accordion" id="faqAccordion">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="question1">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#answer1" aria-expanded="true" aria-controls="answer1">
+                          Question 1
+                        </button>
+                      </h2>
+                      <div id="answer1" class="accordion-collapse collapse" aria-labelledby="question1" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                          Answer to Question 1 goes here.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item my-3">
+                      <h2 class="accordion-header" id="question2">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#answer2" aria-expanded="false" aria-controls="answer2">
+                          Question 2
+                        </button>
+                      </h2>
+                      <div id="answer2" class="accordion-collapse collapse" aria-labelledby="question2" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                          Answer to Question 2 goes here.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="question3">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#answer3" aria-expanded="false" aria-controls="answer3">
+                          Question 3
+                        </button>
+                      </h2>
+                      <div id="answer3" class="accordion-collapse collapse" aria-labelledby="question3" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                          Answer to Question 3 goes here.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              
+                  <h2 class="mt-5">Contact Us</h2>
+                  <form>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Name</label>
+                                <input type="text" class="form-control" id="name" name="name" required>
+                              </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                              </div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                      <label for="question" class="form-label">Question</label>
+                      <textarea class="form-control" id="question" name="question" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </form>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer bg-white text-dark text-center py-2 mt-5">
+      <div class="container">
+        <p>&copy; 2023 UEIS. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/tab-switch.js"></script>
+
+  </body>
+</html>
