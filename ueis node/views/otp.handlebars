@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!-- Coding by CodingLab || www.codinglabweb.com -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OTP Verify - Unified Electronic Identification System</title>
+    <link rel="stylesheet" href="/static/css/styleotp.css" />
+    <link rel="stylesheet" href="/static/css/style.css">
+    <!-- Boxicons CSS -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <script defer src="/static/javascript/scriptotp.js" ></script>
+  </head>
+  <body>
+    <div class="container m-4">
+      <header>
+        <div class="col row_center">
+                <h1>OTP Authentication</h1>
+            </div>
+      </header>
+      <br>
+      <p>Provide code sent to <span class="text-primary">{{phone}}</span> </p>
+      <br>
+      <form id="form">
+        <div class="input-field">
+          <input type="number" name="otp_num_1" placeholder="*" />
+          <input type="number" name="otp_num_2" placeholder="*" disabled />
+          <input type="number" name="otp_num_3" placeholder="*" disabled />
+          <input type="number" name="otp_num_4" placeholder="*" disabled />
+          <input type="number" name="otp_num_5" placeholder="*" disabled />
+          <input type="number" name="otp_num_6" placeholder="*" disabled />
+        </div>
+
+        <a id="otp_btn" type="button" class="my-5 go_to_bank_services">Verify OTP</a>
+
+        <p>Didn't receive code? <a href="#">Request code</a></p>
+      </form>
+      <form action="/service/{{service}}" method="post" id="form2" hidden>
+        <input type="text" name="otp" id="otp" hidden>
+      </form>
+    </div>
+  </body>
+</html>

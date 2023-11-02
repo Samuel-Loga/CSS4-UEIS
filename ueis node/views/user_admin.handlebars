@@ -1,0 +1,262 @@
+
+<title>Admin Dashboard - Unified Electronic Identification System</title>
+
+
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+  <h5>UEIS Admin Dashboard</h5>
+  <div class="btn-toolbar mb-2 mb-md-0">
+    <div class="btn-group">
+      <button type="button" class="btn btn-sm btn-outline-secondary">{{name}}</button>
+      <button type="button" class="btn btn-sm btn-outline-secondary">{{role}}</button>
+    </div>
+  </div>
+</div>
+
+<span id="identity" hidden>1</span>
+
+<div id="home">
+  <div class="row my-4">
+    <div class="d-flex align-items-center justify-content-between">
+      <p class="lead mb-0">Statistics</p>
+      <div class="me-3 nav-item text-nowrap d-xl-none d-lg-none d-md-none d-block">
+        <i class="fa fa-user" style="font-size: 40px;"></i>
+      </div>
+    </div>
+    <div class="col-md-4 my-3">
+      <div class="card-counter primary">
+        <i class="fa fa-sitemap"></i>
+        <span class="count-numbers">
+        {{#if third_count}}
+          {{third_count}}
+        {{else}}
+          0
+        {{/if}}
+        </span>
+        <span class="count-name">Third Parties</span>
+      </div>
+    </div>
+
+    <div class="col-md-4 my-3">
+      <div class="card-counter success">
+        <i class="fa fa-ticket"></i>
+        <span class="count-numbers">
+          {{services_count}}
+        </span>
+        <span class="count-name">Services</span>
+      </div>
+    </div>
+
+    <div class="col-md-4 my-3">
+      <div class="card-counter info">
+        <i class="fa fa-users"></i>
+        <span class="count-numbers">
+          {{#if users_count}}
+            {{users_count}}
+          {{else}}
+            0
+          {{/if}}
+        </span>
+        <span class="count-name">Users</span>
+      </div>
+    </div>
+  </div>
+
+
+  <p class="lead mt-4">Quick Actions</p>
+
+  <div class="service-bag row">
+    <div class="col-md-3 col-xs-6 col-sm-6" data-bs-toggle="modal" data-bs-target="#third_party_modal">
+      <div class="services color-1">
+        <i class="fa fa-plus-circle"></i>
+        <span class="fw-bold text-primary quick-action-text">Add Third-party</span>
+      </div>
+    </div>
+    <div class="col-md-3 col-xs-6 col-sm-6">
+      <div class="services color-2">
+        <i class="fa fa-location-arrow"></i>
+        <span class="fw-bold text-primary quick-action-text">Third-party Stats</span>
+      </div>
+    </div>
+    <div class="col-md-3 col-xs-6 col-sm-6" data-bs-toggle="modal" data-bs-target="#add_card_modal">
+      <div class="services color-3">
+        <i class="fa fa-id-card-o"></i>
+        <span class="fw-bold text-primary quick-action-text">Add Card</span>
+      </div>
+    </div>
+    <div class="col-md-3 col-xs-6 col-sm-6" data-bs-toggle="modal" data-bs-target="#add_service_modal">
+      <div class="services color-4">
+        <i class="fa fa-ticket" style="font-size: 40px;"></i>
+        <span class="fw-bold text-primary quick-action-text">Add Service</span>
+      </div>
+    </div>
+  </div>
+
+  <p class="lead mt-4">Manage Services</p>
+
+  <!-- Display all services in a table -->
+  <div class="table-responsive">
+      <table class="table table-striped table-sm display nowrap" id="services_table" style="width:100%">
+
+      </table>
+  </div>
+</div>
+
+
+
+<!-- Modals used under Admin Dashboard  -->
+<!-- Card Reg. Modal -->
+<div class="modal fade" id="add_card_modal" tabindex="-1" aria-labelledby="cardModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="cardModalLabel" class="">Card Registration</h5>
+      </div>
+
+      <div class="modal-body">
+        <!-- Card Reg. Form -->
+        <form id="card_reg_form">
+          <label class="form-label" for="card_id">National ID Number</label>
+          <input class="form-input" type="text" id="card_id" name="card_id" placeholder="User's ID Number" required>
+        </form>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="card_reg_cancel_btn">Cancel</button>
+        <button type="button" class="btn btn-primary" id="card_reg_btn">Add Card</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Thirdparty Reg. Modal -->
+<div class="modal fade" id="third_party_modal" tabindex="-1" aria-labelledby="tpModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="tpModalLabel">Thirdparty Registration</h5>
+      </div>
+      <div class="modal-body">
+        <!-- Thirdparty Reg. Form -->
+        <form id="third_party_reg_form">
+          <label class="form-label" for="tp_name">Company Id</label>
+          <input type="text" name="tp_id" class="form-input" id="tp_id" placeholder="Gc-342-Mw-Da" required>
+
+          <label class="form-label" for="tp_name">Name</label>
+          <input type="text" name="tp_name" class="form-input" id="tp_name" placeholder="Company X LTD" required>
+
+          <label class="form-label" for="tp_location">Location</label>
+          <input type="text" name="tp_location" class="form-input" id="tp_location" placeholder="Lilongwe" required>
+
+          <label class="form-label" for="tp_email">Email</label>
+          <input type="text" name="tp_email" class="form-input" id="tp_email" placeholder="company@example.com" required>
+
+          <label class="form-label" for="tp_telephone">Telephone</label>
+          <input type="tel" name="tp_telephone" class="form-input" id="tp_telephone" placeholder="+265997222157" required>
+
+          <label class="form-label" for="tp_description">Description</label>
+          <input type="text" name="tp_description" multiple class="form-input" id="tp_description" placeholder="what the company offers" required>
+        </form>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="third_party_reg_cancel_btn">Cancel</button>
+        <button type="button" class="btn btn-primary" id="third_party_reg_btn">Add Third Party</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Service Reg. Modal -->
+<div class="modal fade" id="add_service_modal" tabindex="-1" aria-labelledby="serviceModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="serviceModalLabel" class="">Service Registration</h5>
+      </div>
+
+      <div class="modal-body">
+        <!-- service Reg. Form -->
+        <form id="service_reg_form">
+          <label class="form-label" for="service_name">Name</label>
+          <input class="form-input" type="text" id="service_name" name="service_name" placeholder="service name" required>
+
+          <label class="form-label" for="service_third-party_id">Third-Party</label>
+          <select class="form-input" name="third-party_id" id="service_third-party_id" required>
+            {{#each thirds}}
+                <option value="{{id}}">{{name}}</option>
+            {{/each}}
+          </select>
+          <label class="form-label" for="service_name">Description</label>
+          <input class="form-input" type="text" id="service_description" name="third-party_id" placeholder="what is the service about?" required>
+
+          <label class="form-label" for="service_name">category</label>
+          <select class="form-input" name="category" id="category" required>
+            <option value="E-Banking">E-Banking</option>
+            <option value="E-Payment">E-Payment</option>
+            <option value="E-Health">E-Health</option>
+            <option value="E-Voting">E-Voting</option>
+            <option value="Digital-signatures">Digital-signatures</option>
+          </select>
+
+        </form>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="service_reg_cancel_btn">Cancel</button>
+        <button type="button" class="btn btn-primary" id="service_reg_btn">Add Service</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="block_services_modal" tabindex="-1" aria-labelledby="blockModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="blockModalLabel" class="">Block Service</h5>
+      </div>
+
+      <div class="modal-body">
+        <!-- service Reg. Form -->
+        <form id="block_modal_form">
+          <p>Are you sure you want to block <b><span id="holder"></span></b></p>
+          <input type="text" id="block_id" name="block_id" hidden required>
+          <input type="text" id="route" name="route" hidden required>
+          <input type="text" id="table_id" name="table_id" hidden required>
+        </form>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="cancelBtn">Cancel</button>
+        <button type="button" class="btn btn-danger" onclick="block()">Block</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="activate_services_modal" tabindex="-1" aria-labelledby="blockModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="ActivateModalLabel" class="">Activate Service</h5>
+      </div>
+
+      <div class="modal-body">
+        <!-- service Reg. Form -->
+        <form id="block_modal_form">
+          <p>Are you sure you want to activate <b><span id="holder"></span></b></p>
+          <input type="text" id="active_id" name="active_id" hidden required>
+          <input type="text" id="route" name="route" hidden required>
+        </form>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="cancelBtn">Cancel</button>
+        <button type="button" class="btn btn-danger" onclick="activate()">activate</button>
+      </div>
+    </div>
+  </div>
+</div>

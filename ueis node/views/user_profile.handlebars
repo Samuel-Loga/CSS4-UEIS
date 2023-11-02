@@ -1,0 +1,126 @@
+<title>User Profile - Unified Electronic Identification System</title>
+
+
+<span id="identity" hidden>2</span>
+
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+    <h5>Profile Information</h5>
+    <div class="btn-toolbar mb-2 mb-md-0">
+        <div class="btn-group">
+            <button type="button" class="btn btn-sm btn-outline-secondary">{{name}}</button>
+            <button type="button" class="btn btn-sm btn-outline-secondary">Citizen</button>
+        </div>
+    </div>
+</div>
+
+<div id="user_profile" style="display: block;">
+    <div class="row">
+        <div class="col-md-8 my-3">
+            <h6>My Profile Information</h6>
+            <div class="d-flex border shadow">
+                <div class="text-center px-3">
+                    <div class="profile-card">
+                        <div class="image mt-4">
+                            <i class="fa fa-user-circle"></i>
+                        </div>
+                        <div class="data my-4">
+                            <div>{{name}}</div>
+                            <span>Citizen</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="user-info mt-4">
+                    <div class="d-flex mb-4">
+                        <div class="info">
+                            <div>Village</div>
+                            <span>Mpanje</span>
+                        </div>
+                        <div class="info px-3">
+                            <div>T/A</div>
+                            <span>Lukwa</span>
+                        </div>
+                        <div class="info">
+                            <div>City</div>
+                            <span>Lilongwe</span>
+                        </div>
+                    </div>
+
+                    <div class="user-info-row">
+                        <span class="label">Phone</span>
+                        <span class="value">{{phone}}</span>
+                    </div>
+                    <div class="divider"></div>
+
+                    <div class="user-info-row">
+                        <span class="label">National ID</span>
+                        <span class="value">{{nid}}</span>
+                    </div>
+                    <div class="divider"></div>
+
+                    <div class="user-info-row">
+                        <span class="label">Sex</span>
+                        <span class="value">{{sex}}</span>
+                    </div>
+                    <div class="divider"></div>
+
+                    <div class="user-info-row">
+                        <span class="label">Address</span>
+                        <span class="value">P.O.Box 2324, Kapeni, Lilongwe</span>
+                    </div>
+                    <div class="divider"></div>
+
+                    <div class="buttons mb-4">
+                        <a href="/Dashboard/" class="btn text-nowrap">services</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 my-3">
+            <h6>Most Used Services</h6>
+            <div class="border shadow p-4">
+                <div class="d-flex flex-start">
+                    <img class="rounded-circle shadow-1-strong me-3" src="/static/images/mpamba.png" alt="avatar"
+                        width="60" height="60" />
+
+                    <div>
+                        <h6 class="text-primary mb-2"><a href="#">TNM Mpamba</a></h6>
+                        <p class="text-muted small mb-0">
+                            Mobile money service.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="divider"></div>
+
+                <div class="d-flex flex-start my-3">
+                    <img class="rounded-circle shadow-1-strong me-3" src="/static/images/health.jpeg" alt="avatar"
+                        width="60" height="60" />
+
+                    <div>
+                        <h6 class="text-primary mb-2"><a href="#">E-Health</a></h6>
+                        <p class="text-muted small mb-0">
+                            Access online health-care services.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="divider"></div>
+
+                <div class="d-flex flex-start my-3">
+                    <img class="rounded-circle shadow-1-strong me-3" src="/static/images/vote.png" alt="avatar"
+                        width="60" height="60" />
+
+                    <div>
+                        <h6 class="text-primary mb-2"><a href="#">E-Vote</a></h6>
+                        <p class="text-muted small mb-0">
+                            Conduct voting online.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

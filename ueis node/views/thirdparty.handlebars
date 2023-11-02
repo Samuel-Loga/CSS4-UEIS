@@ -1,0 +1,82 @@
+<title>Manage Thirdparties - Unified Electronic Identification System</title>
+<span id="identity" hidden>3</span>
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+  <h5>Manage Thirdparty Organizations</h5>
+  <div class="btn-toolbar mb-2 mb-md-0">
+    <div class="btn-group me-2">
+      <button type="button" class="btn btn-sm btn-outline-secondary">{{name}}</button>
+      <button type="button" class="btn btn-sm btn-outline-secondary">{{role}}</button>
+    </div>
+  </div>
+</div>
+
+
+<!-- Third-Party Table -->
+<div id="thirdparty">
+  <div class="table-responsive">
+    <table class="table table-striped table-sm display nowrap" id="thirdparties_table" style="width:100%">
+
+    </table>
+  </div>
+</div>
+
+
+
+<!-- Thirdparty Reg. Modal -->
+<div class="modal fade" id="tpModal" tabindex="-1" aria-labelledby="tpModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="tpModalLabel">Thirdparty Registration</h5>
+        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <!-- Thirdparty Reg. Form -->
+        <form>
+          <label class="form-label" for="tp_name">Name</label>
+          <input type="text" class="form-input" id="tp_name" placeholder="Company X LTD" required>
+
+          <label class="form-label" for="tp_location">Location</label>
+          <input type="text" class="form-input" id="tp_location" placeholder="Lilongwe" required>
+
+          <label class="form-label" for="tp_email">Email</label>
+          <input type="text" class="form-input" id="tp_email" placeholder="company@example.com" required>
+
+          <label class="form-label" for="tp_telephone">Telephone</label>
+          <input type="tel" class="form-input" id="tp_telephone" placeholder="+265997222157" required>
+        </form>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-primary">Add User</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="block_third_party_modal" tabindex="-1" aria-labelledby="blockModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="blockModalLabel" class="">Block Third Party</h5>
+      </div>
+
+      <div class="modal-body">
+        <!-- service Reg. Form -->
+        <form id="block_modal_form">
+          <p>Are you sure you want to block <b><span id="holder"></span></b></p>
+          <input type="text" id="status" name="status" hidden required>
+        </form>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-danger">Block</button>
+      </div>
+    </div>
+  </div>
+</div>

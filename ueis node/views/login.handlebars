@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <script defer src="/static/javascript/serialport.js"></script>
+    <script defer src="/static/javascript/card_scan.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row_break"></div>
+        <div class="row">
+            <div id="welcome-title" class="col row_center">
+                <h1>Welcome to UEIS</h1>
+                <img id="malawi-map" src="/static/images/malawi_map.png" alt="" srcset="">
+            </div>
+            <div id="card-prompt" class="row row_center">
+                <h6 id="card-prompt-text">Place your card on the sensor</h6>
+                <img id="card-loader" src="/static/images/SVG-Loaders-master/svg-loaders/tail-spin.svg" hidden alt="" srcset="">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col row_center">
+                <img src="/static/images/scanner.png" alt="scanner icon" srcset="">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col row_center">
+                <button id="scan-btn" class="btn btn-primary">Scan card</button>
+                <form id="card-form" action="/card/auth" method="post">
+                    <input type="text" name="card" id="card-code" hidden>
+                </form>
+                <p id="results">
+
+                </p>
+            </div>
+            <div class="row row_center">
+              <h6>Don't have an account? <a href="/Auth/register">Register</a></h6>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

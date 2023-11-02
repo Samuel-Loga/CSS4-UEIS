@@ -1,0 +1,77 @@
+<title>User Dashboard - Unified Electronic Identification System</title>
+
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+  <h5>Welcome to UEIS User Dashboard</h5>
+  <div class="btn-toolbar mb-2 mb-md-0">
+    <div class="btn-group">
+      <button type="button" class="btn btn-sm btn-outline-secondary">{{name}}</button>
+      <button type="button" class="btn btn-sm btn-outline-secondary">Citizen</button>
+    </div>
+  </div>
+</div>
+
+<span id="identity" hidden>1</span>
+
+<div id="home">
+  <div class="my-4">
+    <div class="owl-theme row">
+      <div class="item text-muted me-3">
+        <div class="likes">
+          <div class="d-flex flex-start">
+            <div class="position-relative mx-5">
+              <img class="rounded-circle" src="/static/images/supporting-person.svg" alt="avatar" width="70"
+                height="70" />
+            </div>
+
+            <div class="text-start">
+              <h5>Authentication!</h5>
+              <span class="me-text">
+                Grant users access to various services while ensuring secure and convenient access with minimal reliance
+                on
+                traditional credentials like usernames and passwords.
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="lead">Want to experiecnce the most with UEIS, choose a service below:</p>
+
+  <div class="container">
+    <div class="box-container">
+      <div class="box e_bank" style="background: url(/static/images/bg-ebank.webp);">
+        <img src="/static/images/ebank.png" alt="" class="mb-2">
+        <h3>E-Banking</h3>
+        <a href="/service/otp/banks" class="btn" id="openPageButton1">Open</a>
+      </div>
+
+      <div class="box e_pay" style="background: url('/static/images/bg-ebank.jpg');">
+        <img src="/static/images/epay.png" alt="" class="mb-2">
+        <h3>E-Payment</h3>
+        <a href="/service/otp/E-Payment" class="btn" id="openPageButton2">Open</a>
+      </div>
+
+      <div class="box e_vote" style="background: url('/static/images/technology.png');">
+        <img src="/static/images/ballot-box.png" alt="" class="mb-2">
+        <h3>E-Voting</h3>
+        <a href="/service/otp/E-vote" class="btn" id="openPageButton3">Open</a>
+      </div>
+
+      <div class="box e_health" style="background: url('/static/images/health.png');">
+        <img src="/static/images/ehealth.png" alt="" class="mb-2">
+        <h3>E-Health</h3>
+
+        <a href="/service/otp/E-Health" class="btn" id="openPageButton4">Open</a>
+      </div>
+
+      <div class="box digital_signature" style="background: url('/static/images/bg.jpg');">
+        <img src="/static/images/digitai-signature.png" alt="" class="mb-2">
+        <h3>Digital Signatures</h3>
+
+        <a href="/service/otp/digital_signature" class="btn" id="openPageButton5">Open</a>
+      </div>
+    </div>
+  </div>
+</div>
