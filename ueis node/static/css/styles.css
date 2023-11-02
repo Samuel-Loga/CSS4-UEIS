@@ -1,0 +1,153 @@
+/*
+@import url('https://fonts.googleapis.com/css?family=Inter');
+
+
+/* START REGISTER STYLES /
+.btn-primary{
+    background-color: #0d99ff;
+    color: white;
+    border: #0d99ff 0.05em solid;
+}
+.btn-primary:hover{
+    background-color: #FFFFFF;
+    color: #0d99ff;
+}
+
+a{
+    color: #22ADD8;
+    text-decoration: none;}
+
+h1,h3,h5,h6{
+    font-family: 'Inter';
+
+}
+
+.malawi-map{
+    max-width: 10px;
+    max-height: 10px;
+}
+#welcome-title{
+    align-items: center;
+}
+#card-prompt{
+    margin-top: -2em
+}
+
+.row_center{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 0.3em 0;
+}
+.row_break{
+    margin: 10em;
+}
+
+#scan-btn{
+    width: 15em;
+}
+
+#register-btn{
+    width: 20em;
+}
+.register-input{
+    width: 25em;
+    padding: 0.25em 0;
+}
+
+.pin-input{
+    width: 15em;
+}
+#pin-input::placeholder{
+    text-align: center;
+}
+#pin-input{
+    background-color: #D9D9D9;
+}
+
+#login_btn_pic{
+    width: 1.5em;
+}
+
+#email-img{
+    width: 1.5em;
+}
+#email_input,#password,#cpassword,#NID-input{
+    background-color: #D9D9D9;
+    border-left: 0.05em solid white;
+}
+
+.input-group-text{
+    background-color: #D9D9D9;
+}
+
+#code-input{
+    background-color: #D9D9D9;
+    width: 20em;
+}
+#code-input::placeholder{
+    text-align: center;
+}
+#reset-btn{
+    width: 20em;
+}
+
+#otp-btn{
+    width: 20em;
+}
+#otp-input{
+    background-color: #D9D9D9;
+    width: 20em;
+}
+#otp-input::placeholder{
+    text-align: center;
+}
+/* END REGISTER STYLES */
+
+
+body {
+    box-sizing: border-box;
+    font-family: 'Inter';
+  }
+
+  .bi {
+    color: #070707;
+    margin-right: 10px;
+  }
+  .bi-box-arrow-left {
+    color: red;
+    margin-right: 10px;
+  }
+  .vertical-line {
+    border-left: 1px solid #000;
+    height: 100vh;
+  }
+  /* Create an active/current "tab button" class */
+  .tab button.active {
+    background-color: #0D99FF;
+    opacity: 0.8;
+  }
+  .logout {
+    margin-top: 9.5em;
+    background-color: #070707;
+    color: #fff;
+  }.logout:hover, .logout:focus {color: #0D99FF;}
+
+  /* Styles for service cards */
+  .card{
+    background-color: #FAF9F9;
+  }
+  .service-icon {
+    height: 100px;
+    width: auto;
+  }
+  .service-link {
+    text-decoration: none;
+    color: #0D99FF;
+    font-weight: 500;
+    padding: 5px;
+  }
+  .service-link:hover, .service-link:focus {
+    color: #000;
+    transition: 0.6s ease-in-out;
+  }

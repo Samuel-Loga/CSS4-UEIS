@@ -1,0 +1,193 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Inter');
+
+* {
+    margin: 0;
+    outline: none;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: Space Grotesk;
+    background-color: #ccdae4;
+    overflow-x: hidden;
+  }
+
+  .wrapper {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .content {
+    margin-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 50px 100px 0;
+    opacity: 0; /* Initially set the opacity to 0 */
+    transform: translateX(-100%); /* Initially position the content outside the viewport */
+    animation: slideInContent 2s forwards, fadeIn 2s forwards; /* Use two animations: slideInContent and fadeIn */
+  }
+
+  @keyframes slideInContent {
+    from {
+      transform: translateX(-100%); /* Start from outside the viewport */
+    }
+    to {
+      transform: translateX(0); /* Slide in to the original position */
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0; /* Start with opacity 0 */
+    }
+    to {
+      opacity: 1; /* Fade in */
+    }
+  }
+
+  .text {
+    margin-left: 40px;
+    width: 50%;
+    padding-right: 150px;
+  }
+
+  .text h2 {
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 46px;
+    color: #0e0e0e;
+    font-family: 'Inter','Trebuchet MS','poppins','Times New Roman', Times, serif;
+  }
+
+  .text a {
+    position: relative;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 18px 30px;
+    letter-spacing: 2px;
+    font-weight: 500;
+    margin-top: 60px;
+
+    font-family: 'Inter','Trebuchet MS';
+  }
+
+  .text a:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    background-color: #0d99ff;
+    z-index: -1;
+    transition: all ease 0.5s;
+  }
+
+  .text a:hover:before {
+    width: 100%;
+  }
+
+  .img {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(520px, #0d99ff, transparent 50%);
+    margin-top: -50px;
+  }
+
+  .email-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .social-icons {
+    height: 100%;
+    animation: rotation 60s linear infinite;
+  }
+
+  @keyframes rotation {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .social-icons img {
+    position: absolute;
+  }
+
+  .social-icons img:nth-child(1) {
+    top: 0;
+    left: 42%;
+  }
+
+  .social-icons img:nth-child(2) {
+    top: 25%;
+    right: 0;
+  }
+
+  .social-icons img:nth-child(3) {
+    top: 70%;
+    left: 70%;
+  }
+
+  .social-icons img:nth-child(4) {
+    top: 25%;
+    left: 0;
+  }
+
+  .social-icons img:nth-child(5) {
+    top: 70%;
+    left: 10%;
+  }
+  .ocean {
+    height: 5%;
+    width:100%;
+    position:absolute;
+    bottom:0;
+    left:0;
+    background: #015871;
+  }
+
+  .wave {
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg) repeat-x;
+    position: absolute;
+    top: -198px;
+    width: 6400px;
+    height: 198px;
+    animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
+    transform: translate3d(0, 0, 0);
+  }
+
+  .wave:nth-of-type(2) {
+    top: -175px;
+    animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -.125s infinite, swell 7s ease -1.25s infinite;
+    opacity: 1;
+  }
+
+  @keyframes wave {
+    0% {
+      margin-left: 0;
+    }
+    100% {
+      margin-left: -1600px;
+    }
+  }
+
+  @keyframes swell {
+    0%, 100% {
+      transform: translate3d(0,-25px,0);
+    }
+    50% {
+      transform: translate3d(0,5px,0);
+    }
+  }

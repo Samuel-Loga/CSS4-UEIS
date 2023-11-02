@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css?family=Inter');
+
+.btn-primary{
+    background-color: #0d99ff;
+    color: white;
+    border: #0d99ff 0.05em solid;
+}
+.btn-primary:hover{
+    background-color: #FFFFFF;
+    color: #0d99ff;
+}
+
+a{
+    color: #22ADD8;
+    text-decoration: none;
+}
+
+h1,h3,h5,h6{
+    font-family: 'Inter';
+
+}
+
+#malawi-map{
+    width: 10em;
+}
+#welcome-title{
+    align-items: center;
+}
+#card-prompt{
+    margin-top: -2em;
+    color: #0d99ff;
+}
+
+.row_center{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 0.3em 0;
+}
+.row_break{
+    margin: 5em;
+}
+
+#scan-btn{
+    width: 15em;
+}
+
+#register-btn{
+    width: 20em;
+}
+.register-input{
+    width: 25em;
+    padding: 0.25em 0;
+}
+
+.pin-input{
+    width: 15em;
+}
+#pin-input::placeholder{
+    text-align: center;
+}
+#pin-input{
+    background-color: #D9D9D9;
+}
+
+#login_btn_pic{
+    width: 1.5em;
+}
+
+body{
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+#email-img{
+    width: 1.5em;
+}
+#email_input,#NID-input{
+    background-color: #D9D9D9;
+    border-left: 0.05em solid white;
+}
+#flabel{
+    margin-left: 0.8em;
+    align-self: center;
+    color: #767474;
+}
+#fingerprint{
+    background-color: white;
+    border-left: 0.05em solid #D9D9D9;
+}
+#finput:hover{
+    border: 0.05em solid #0d99ff;
+}
+#finput{
+    background-color: white;
+}
+#ficon{
+    width: 1.5em;
+}
+#checkbox{
+    margin-right: 0.3em;
+}
+#prompt{
+    color:#0d99ff;
+}
+
+.input-group-text{
+    background-color: #D9D9D9;
+}
+
+#code-input{
+    background-color: #D9D9D9;
+    width: 20em;
+}
+#code-input::placeholder{
+    text-align: center;
+}
+#reset-btn{
+    width: 20em;
+}
+
+#otp-btn{
+    width: 20em;
+}
+#otp-input{
+    background-color: #D9D9D9;
+    width: 20em;
+}
+#otp-input::placeholder{
+    text-align: center;
+}
+
+/* finger auth page*/
+.center svg.fingerprint path.clone {
+    transition: stroke-dashoffset 2s ease-out;
+    -webkit-animation: try 2.5s ease-out;
+            animation: try 2.5s ease-out;
+  }
+.center svg.fingerprint.active {
+  transform: scale(0.97);
+}
+.center svg.fingerprint.active path.clone {
+  stroke-dashoffset: 0;
+}
+
+.center .icon-success {
+  width: 135px;
+  height: 135px;
+  overflow: visible;
+}
+
+.center .icon-success circle {
+  transform-origin: 50% 50%;
+  transform: scale(0);
+  transition: transform 200ms cubic-bezier(0.18, 0.89, 0.32, 1.28);
+}
+.center .icon-success path {
+  opacity: 0;
+  transition: stroke-dashoffset 350ms 100ms ease;
+}
+.center.success .fingerprint {
+  transform: scale(0);
+}
+.center.success .icon-success circle {
+  transform: scale(1);
+}
+.center.success .icon-success path {
+  stroke-dashoffset: 0;
+  opacity: 1;
+  transition: opacity 0s, stroke-dashoffset 0.5s;
+}
+.center.success .scan {
+  display: none;
+}
+.center.success .scan-success {
+  display: block;
+}
+
+#card-loader{
+  width: 5em;
+}
+@-webkit-keyframes try {
+  0%, 100% {
+    stroke-dashoffset: 178;
+  }
+  50% {
+    stroke-dashoffset: 100;
+  }
+}
+@keyframes try {
+  0%, 100% {
+    stroke-dashoffset: 178;
+  }
+  50% {
+    stroke-dashoffset: 100;
+  }
+}
